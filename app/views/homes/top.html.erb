@@ -5,16 +5,16 @@
 <body>
     <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-offset-lg-8">
+          <div class="mx-auto">
     		<h1>Welcome to <i class="fas fa-book"></i><b>Bookers</b> !!</h1>
             <p>In <i class="fas fa-book"></i><b>Bookers</b>,</p>
     		<p>You can share and exchange your opinions , inpressions , and emotions</p>
     		<p>about various books!</p>
+    		<div>
+    		    <%= link_to "Log in", user_session_path, class: "btn btn-primary btn-block" %>
+                <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-block" %>
+    		</div>
           </div>
         </div>
-    </div>
-    <div class="d-grid gap-2">
-        <%= link_to "Log in", user_session_path, class: "btn btn-primary btn-block" %>
-        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-block" %>
     </div>
 </body>
