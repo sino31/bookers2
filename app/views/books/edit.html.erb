@@ -1,9 +1,18 @@
 <div class="row">
-  <div class="col-md-offset-3 col-md-6">
-    <h1>Editing Book</h1>
-      <%= render 'books/book', book: @book %>
-    <div>
-      <%= link_to "Show", book_path(@book) %>|<%= link_to "Back", books_path %>
-    </div>
+    <div class="mx-auto">
+        <h1>Editing Book</h1>
+          <%= form_with model: @book do |f| %>
+          <div class="form-group">
+            <label for="book_title">Title</label></br>
+              <%= f.text_field :title, :size=>"50" %></br>
+          </div>
+          <div class="form-group">
+            <label for="book_opinion">Opinion</label></br>
+              <%= f.text_area :body, :size=>"50×15" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit 'Update Book', class: "btn btn-success" %>
+          </div>
+          <% end %>
+      </div>
   </div>
-</div>
