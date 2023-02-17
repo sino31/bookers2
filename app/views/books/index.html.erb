@@ -17,6 +17,8 @@
                     <th></th>
                     <th>Title</th>
                     <th>Opinion</th>
+                    <th></th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -42,6 +44,7 @@
                           <% end %>
                         </td>
                       <% end %>
+                      <td><%= book.book_comments.count %> Comment</td>
                     </tr>
                   <% end %>
                 </tbody>
