@@ -34,17 +34,17 @@
                       <% if book.favorited_by?(current_user) %>
                         <td>
                           <%= link_to book_favorites_path(book), method: :delete, style: "color:red" do %>
-                            <i class="fas fa-heart"></i> <%= book.favorites.count %>
+                            <i class="fas fa-heart"> </i><%= book.favorites.count %>
                           <% end %>
                         </td>
                       <% else %>
                         <td>
                           <%= link_to book_favorites_path(book), method: :post do %>
-                            <i class="far fa-heart"></i> <%= book.favorites.count %>
+                            <i class="far fa-heart"> </i><%= book.favorites.count %>
                           <% end %>
                         </td>
                       <% end %>
-                      <td><%= book.book_comments.count %> Comment</td>
+                      <td>Comment <%= book.book_comments.count %></td>
                     </tr>
                   <% end %>
                 </tbody>
